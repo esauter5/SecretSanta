@@ -3,4 +3,9 @@
   <h3>Check back soon to see your giftee</h3>
 
   <%= image_tag 'tree.png', id: 'tree' %>
+
+  <h5>Here's a list of who else has signed up so far:</h5>
+  <% @other_users.each do |user| %>
+    <li><%= "#{user.first_name} #{user.last_name}" %></li>
+  <% end %>
 </div>
