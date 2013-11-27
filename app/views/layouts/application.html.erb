@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SecretSanta</title>
+  <title>Secret Santa</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+          <span id="logo">GC Secret Santa 2013</span>
+          <nav>
+            <ul class="nav pull-right">
+              <% if user_signed_in? %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <div class="container main">
+    <%= yield %>
+  </div>
 </body>
 </html>

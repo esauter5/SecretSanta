@@ -1,2 +1,6 @@
-<h3>Hello, <%= current_user.first_name %>!<h3>
-<h2>Welcome to the 2014 GC Gift Exchange</h2>
+<div class="center hero-unit">
+  <h2>Welcome to the 2014 GC Gift Exchange, <%= current_user.first_name %>!</h2>
+  <h3>Check back soon to see your giftee</h3>
+
+  <%= image_tag 'tree.png', id: 'tree' %>
+</div>
