@@ -21,7 +21,7 @@ SecretSanta::Application.configure do
     :port                 => 587,
     :domain               => "gmail.com",
     :user_name            => "esauter5",
-    :password             => "mystery",
+    :password             => "mystery"
     :authentication       => "plain",
     :enable_starttls_auto => true
   }

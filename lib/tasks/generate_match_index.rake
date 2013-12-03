@@ -23,5 +23,6 @@ task :generate_match_index => :environment do
     santa = User.find(n)
     receiver = User.find(giftees[n-1])
     santa.giftee = "#{receiver.first_name} #{receiver.last_name}"
+    santa.save!
   end
 end
