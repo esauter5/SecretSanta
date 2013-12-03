@@ -20,7 +20,7 @@ SecretSanta::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.action_mailer.default_url_options = { :host => 'http://gc-secret-santa.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'gc-secret-santa.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp 
 
