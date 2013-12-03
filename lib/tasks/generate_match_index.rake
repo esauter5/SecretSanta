@@ -4,9 +4,9 @@ task :generate_match_index => :environment do
   gifters = (1..count).to_a
   giftees = gifters.shuffle
   
-  (0..count-1).each do |n|
-    puts "#{gifters[n]} #{giftees[n]}"
-  end
+  #(0..count-1).each do |n|
+   # puts "#{gifters[n]} #{giftees[n]}"
+  #end
 
   (1..count).each do |n|
     ind = gifters.index { |x| x == n }
@@ -14,7 +14,7 @@ task :generate_match_index => :environment do
     giftee_i = gifters.index { |y| y == giftee_num }
 
     if gifters[ind] == giftees[giftee_i]
-      puts "#{gifters[ind]} #{giftees[ind]}"
+      #puts "#{gifters[ind]} #{giftees[ind]}"
       puts "DUPE!!!"
     end
   end 
