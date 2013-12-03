@@ -1,6 +1,6 @@
 <div class="center hero-unit">
   <h2>Welcome to the 2013 GC Secret Santa, <%= current_user.first_name %>!</h2>
-  <h3>Check back soon to see your giftee</h3>
+  <h3>This year, you will be buying a gift for <span id="giftee"><%= current_user.giftee %></span></h3>
 
   <%= image_tag 'tree.png', id: 'tree' %>
 
